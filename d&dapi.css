@@ -1,0 +1,43 @@
+.drop-zone{
+    max-width:200px;
+    height:200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:2px dashed black;
+    color: rgb(124, 141, 158);
+    cursor: pointer;
+    padding:5px;
+    border-radius: 10px;
+}
+.drop-zone__over{
+    border:2px solid black;
+}
+
+.input{
+    display:none;
+}
+
+.thumb{
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    overflow:hidden;
+    background-color:rgb(133, 139, 145);
+    background-size: cover;
+    background-position:center;
+    position:relative;
+}
+.thumb::after{
+    content:attr(data-label);
+    bottom:0;
+    left:0;
+    width:100%;
+    position:absolute;
+    text-align: center;
+    color: white;
+    padding:5px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
